@@ -1,7 +1,4 @@
 import React from "react";
-import {InputElement} from "./inputElement";
-
-
 
 export default class BoxDiv extends React.Component {
 	  
