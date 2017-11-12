@@ -92,16 +92,11 @@ export default class Table extends React.Component {
 									{name}
 									{this.state.sort.column !== name.toLowerCase() ? 
 											<span><img id={name+'_up'} src="./images/upArrow.png" onClick={this.sort.bind(this)}/>
-									
 											<img id={name+'_down'} src="./images/downArrow.png" onClick={this.sort.bind(this)}/></span> : null}
-									{console.log(this.state.sort.column === name.toLowerCase())}
-									{console.log(this.state.sort.order === 'asc')}
-									{console.log(this.state.time !== 1)}
 									{this.state.sort.column === name.toLowerCase() && this.state.sort.order === 'asc' && this.state.time !== 1 ?
                     					<img id={name+'_up'} src="./images/upArrow.png" onClick={this.sort.bind(this)}/> : null}
 									{this.state.sort.column === name.toLowerCase() && this.state.sort.order === 'desc' && this.state.time !== 1 ?
 										<img id={name+'_down'} src="./images/downArrow.png" onClick={this.sort.bind(this)}/> : null}
-									
                     					<input id={name+'_filter'}type="search" style={{marginTop : 2}} onBlur={this.filter.bind(this)}/>
                     				</th>;
 						}, this)
